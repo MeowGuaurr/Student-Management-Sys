@@ -1,6 +1,4 @@
-# Proyecto de SOLID [CSF6]
-# Student Management System
-
+# Proyecto de SOLID [_CSF6_][*Student Management System*]
 ## Autores ✒️
 ### Grupo 02
 * **Reyna Galan** - [MeowGuaurr](https://github.com/MeowGuaurr)
