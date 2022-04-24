@@ -1,6 +1,6 @@
 # 📋 Proyecto SOLID
 
-## 🎓 Student Management System
+## 🎓 Sistema de gestión de estudiantes
 
 <p align="center">
   <img src="./Recursos/uml.png" alt="UML" width="720">
