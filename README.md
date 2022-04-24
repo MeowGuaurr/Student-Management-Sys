@@ -1,4 +1,11 @@
-# 📋 Proyecto de SOLID [_Student Management System_]
+# 📋 Proyecto SOLID
+
+## 🎓 Student Management System
+
+<p align="center">
+  <img src="./Recursos/uml.png" alt="UML" width="720">
+</p>
+
 ## ✒️ Autores
 ### Grupo 02, [_CSF6_]
 * **Reyna Galan** - [MeowGuaurr](https://github.com/MeowGuaurr)
