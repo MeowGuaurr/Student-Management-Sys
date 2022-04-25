@@ -4,7 +4,7 @@ public class Evaluacion {
     // Declaracion de variables
     private String nombre;
     private String materia;
-    private int nota;
+    private double nota;
     private String observaciones;
 
     // Getters y Setters
@@ -24,11 +24,11 @@ public class Evaluacion {
         this.materia = materia;
     }
 
-    public int getNota() {
+    public double getNota() {
         return nota;
     }
 
-    public void setNota(int nota) {
+    public void setNota(double nota) {
         this.nota = nota;
     }
 
@@ -43,7 +43,7 @@ public class Evaluacion {
     // Constructor de la clase
     public Evaluacion() {}
 
-    public Evaluacion(String nombre, String materia, int nota, String observaciones){
+    public Evaluacion(String nombre, String materia, double nota, String observaciones){
         this.nombre = nombre;
         this.materia = materia;
         this.nota = nota;
