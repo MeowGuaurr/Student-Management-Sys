@@ -3,7 +3,7 @@ package csf6.grupo04;
 public class Programas extends Evaluacion{
     // Declaracion de variables
     private String rutaArchivo;
-    private int version;
+    private double version;
     private String cambios;
 
     // Getters y Setters
@@ -16,11 +16,11 @@ public class Programas extends Evaluacion{
         this.rutaArchivo = rutaArchivo;
     }
 
-    public int getVersion() {
+    public double getVersion() {
         return version;
     }
 
-    public void setVersion(int version) {
+    public void setVersion(double version) {
         this.version = version;
     }
 
@@ -35,10 +35,19 @@ public class Programas extends Evaluacion{
     // Constructor de la clase
     public Programas() {}
 
-    public Programas(String rutaArchivo, int version, String cambios){
+    public Programas(String nombre, String materia, int nota, String observaciones, String rutaArchivo, double version, String cambios){
         super();
+        this.setNombre(nombre);
+        this.setMateria(materia);
+        this.setNota(nota);
+        this.setObservaciones(observaciones);
         this.rutaArchivo = rutaArchivo;
         this.version = version;
         this.cambios = cambios;
+    }
+
+    // Metodo para listar las evaluaciones
+    public String listarEvaluaciones(){
+        return "Evaluación: " + getNombre() + " de " + getMateria() + " obtuvo un: " + getNota() + ", Observaciones: " + getObservaciones() + ", Ruta: " + getRutaArchivo() + ", Versión: " + getVersion() + ", Cambios: " + getCambios();
     }
 }
