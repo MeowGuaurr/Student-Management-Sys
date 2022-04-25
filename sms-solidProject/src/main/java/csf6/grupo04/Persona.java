@@ -18,7 +18,7 @@ public class Persona {
 
     public String listarPersonas()
     {
-        //falta definir el retorno del método
+        return "falta definir el retorno del método";
     }
 }
 
