@@ -3,3 +3,9 @@ Como aplicamos SOLID al proyecto?
 Uso de interfaces
 
 Uso de paquetes
+
+Como se tradu el uml a código.
+
+Como hacer para que solo Coach pueda crear evaluaciones.
+
+Es necesario que todas las clases tenga métodos o puede solo tener atributos?
