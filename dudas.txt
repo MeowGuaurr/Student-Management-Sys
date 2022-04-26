@@ -1,1 +1,5 @@
 Como aplicamos SOLID al proyecto?
+
+Uso de interfaces
+
+Uso de paquetes
