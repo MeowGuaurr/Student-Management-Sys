@@ -40,7 +40,7 @@ public class Coach extends Persona{
     // Método para listar Coach
     public String listarPersonas(){
         return "Identifiación: " + getIdentificacion() +
-                "Nombre: " + getNombre() + " " + getApellido() +
+                "\nNombre: " + getNombre() + " " + getApellido() +
                 "\nEdad: " + getEdad() +
                 "\nE-mail: " + getEmail() +
                 "\nTeléfono:" + getTelefono() +
