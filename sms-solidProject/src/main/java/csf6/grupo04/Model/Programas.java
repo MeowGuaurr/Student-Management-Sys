@@ -1,4 +1,4 @@
-package csf6.grupo04;
+package csf6.grupo04.Model;
 
 public class Programas extends Evaluacion{
     // Declaracion de variables

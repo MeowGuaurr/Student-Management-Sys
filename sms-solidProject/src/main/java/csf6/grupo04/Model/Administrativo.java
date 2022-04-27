@@ -1,6 +1,4 @@
-package csf6.grupo04;
-
-import java.util.Date;
+package csf6.grupo04.Model;
 
 public class Administrativo extends Persona{
     private int identificacion;

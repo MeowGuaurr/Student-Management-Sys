@@ -1,4 +1,4 @@
-package csf6.grupo04;
+package csf6.grupo04.Model;
 import java.util.Date;
 
 public class Estudiante extends Persona{

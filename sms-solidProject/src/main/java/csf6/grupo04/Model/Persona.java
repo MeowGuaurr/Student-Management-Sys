@@ -1,4 +1,4 @@
-package csf6.grupo04;
+package csf6.grupo04.Model;
 
 public class Persona {
     private String nombre;
