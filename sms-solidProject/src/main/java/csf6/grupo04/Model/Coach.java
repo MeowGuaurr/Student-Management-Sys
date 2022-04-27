@@ -2,16 +2,16 @@ package csf6.grupo04.Model;
 
 public class Coach extends Persona{
     // Variables
-    private int identificacion;
+    private String identificacion;
     private String direccion;
 
     // Getters y Setters
 
-    public int getIdentificacion() {
+    public String getIdentificacion() {
         return identificacion;
     }
 
-    public void setIdentificacion(int identificacion) {
+    public void setIdentificacion(String identificacion) {
         this.identificacion = identificacion;
     }
 
@@ -26,7 +26,7 @@ public class Coach extends Persona{
     // Constructores
     public Coach() {}
 
-    public Coach(String nombre, String apellido, int edad, String email, int telefono, int identificacion, String direccion){
+    public Coach(String nombre, String apellido, int edad, String email, int telefono, String identificacion, String direccion){
         super();
         setNombre(nombre);
         setApellido(apellido);

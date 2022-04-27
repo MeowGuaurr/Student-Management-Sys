@@ -2,16 +2,16 @@ package csf6.grupo04.Model;
 
 public class Administrativo extends Persona{
     // Variables
-    private int identificacion;
+    private String identificacion;
     private String direccion;
     private String cargo;
 
     // Getters y Setters
-    public int getIdentificacion() {
+    public String getIdentificacion() {
         return identificacion;
     }
 
-    public void setIdentificacion(int identificacion) {
+    public void setIdentificacion(String identificacion) {
         this.identificacion = identificacion;
     }
 
@@ -35,7 +35,7 @@ public class Administrativo extends Persona{
     public Administrativo(){
     }
 
-    public Administrativo(String nombre, String apellido, int edad, String email, int telefono, int id, String vdireccion, String vcargo) {
+    public Administrativo(String nombre, String apellido, int edad, String email, int telefono, String id, String vdireccion, String vcargo) {
         this.setNombre(nombre);
         this.setApellido(apellido);
         this.setEdad(edad);
