@@ -2,10 +2,12 @@ package csf6.grupo04.Model;
 import java.util.Date;
 
 public class Estudiante extends Persona{
+    // Variables
     private String curso;
     private Date fechaInicio;
     private Date fechaFin;
 
+    // Getters y Setters
     public String getCurso() {
         return curso;
     }
@@ -30,6 +32,7 @@ public class Estudiante extends Persona{
         this.fechaFin = fechaFin;
     }
 
+    // Constructores
     public Estudiante(){
     }
 
@@ -45,6 +48,7 @@ public class Estudiante extends Persona{
         this.setFechaFin(fin);
     }
 
+    // Métodos
     public String registrarseEnCurso()
     {
         return "Nombre: " + this.getNombre() + " " + this.getApellido() +

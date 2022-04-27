@@ -1,6 +1,7 @@
 package csf6.grupo04.Model;
 
 public class Curso {
+    // Varibales
     private String nombre;
     private String codigo;
     private int annio;
@@ -58,7 +59,9 @@ public class Curso {
         this.finalizado = finalizado;
     }
 
-    // Constructor
+    // Constructores
+    public Curso(){
+    }
     public Curso(String nombre, String codigo, int annio, int vacantes, int inscritos) {
         this.nombre = nombre;
         this.codigo = codigo;
@@ -66,5 +69,7 @@ public class Curso {
         this.vacantes = vacantes;
         this.inscritos = inscritos;
     }
+
+    // Métodos
     //pendiente métodos
 }

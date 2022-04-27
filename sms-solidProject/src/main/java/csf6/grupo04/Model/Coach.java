@@ -1,7 +1,7 @@
 package csf6.grupo04.Model;
 
 public class Coach extends Persona{
-    // Declaracion de variables
+    // Variables
     private int identificacion;
     private String direccion;
 
@@ -23,7 +23,7 @@ public class Coach extends Persona{
         this.direccion = direccion;
     }
 
-    // Constructor
+    // Constructores
     public Coach() {}
 
     public Coach(String nombre, String apellido, int edad, String email, int telefono, int identificacion, String direccion){
@@ -37,7 +37,7 @@ public class Coach extends Persona{
         this.direccion = direccion;
     }
 
-    // Método para listar Coach
+    // Métodos
     public String listarPersonas(){
         return "Identifiación: " + getIdentificacion() +
                 "\nNombre: " + getNombre() + " " + getApellido() +

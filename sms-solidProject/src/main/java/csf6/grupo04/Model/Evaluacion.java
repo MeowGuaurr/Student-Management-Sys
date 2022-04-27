@@ -1,7 +1,7 @@
 package csf6.grupo04.Model;
 
 public class Evaluacion {
-    // Declaracion de variables
+    // Variables
     private String nombre;
     private String materia;
     private double nota;
@@ -40,7 +40,7 @@ public class Evaluacion {
         this.observaciones = observaciones;
     }
 
-    // Constructor de la clase
+    // Constructores
     public Evaluacion() {}
 
     public Evaluacion(String nombre, String materia, double nota, String observaciones){
@@ -50,7 +50,7 @@ public class Evaluacion {
         this.observaciones = observaciones;
     }
 
-    // Metodo para listar las evaluaciones
+    // Metodos
     public String listarEvaluaciones(){
         return "Evaluación: " + getNombre() + " de " + getMateria() + " obtuvo un: " + getNota() + ", Observaciones: " + getObservaciones();
     }

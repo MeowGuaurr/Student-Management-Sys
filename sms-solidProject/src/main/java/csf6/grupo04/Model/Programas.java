@@ -1,7 +1,7 @@
 package csf6.grupo04.Model;
 
 public class Programas extends Evaluacion{
-    // Declaracion de variables
+    // Variables
     private String rutaArchivo;
     private double version;
     private String cambios;
@@ -32,7 +32,7 @@ public class Programas extends Evaluacion{
         this.cambios = cambios;
     }
 
-    // Constructor de la clase
+    // Constructores
     public Programas() {}
 
     public Programas(String nombre, String materia, int nota, String observaciones, String rutaArchivo, double version, String cambios){
@@ -46,7 +46,7 @@ public class Programas extends Evaluacion{
         this.cambios = cambios;
     }
 
-    // Metodo para listar las evaluaciones
+    // Metodos
     public String listarEvaluaciones(){
         return "Evaluación: " + getNombre() + " de " + getMateria() + " obtuvo un: " + getNota() + ", Observaciones: " + getObservaciones() + ", Ruta: " + getRutaArchivo() + ", Versión: " + getVersion() + ", Cambios: " + getCambios();
     }

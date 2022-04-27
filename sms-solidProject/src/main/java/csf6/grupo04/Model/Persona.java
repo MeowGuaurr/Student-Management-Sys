@@ -1,12 +1,14 @@
 package csf6.grupo04.Model;
 
 public class Persona {
+    // Variables
     private String nombre;
     private String apellido;
     private int edad;
     private String email;
     private int telefono;
 
+    // Getters y Setters
     public String getNombre() {
         return nombre;
     }
@@ -47,6 +49,7 @@ public class Persona {
         this.telefono = telefono;
     }
 
+    // Constructores
     public Persona(){
     }
 
@@ -59,6 +62,7 @@ public class Persona {
         this.setTelefono(valortelefono);
     }
 
+    // Métodos
     public String listarPersonas()
     {
         return "Nombre: " + this.getNombre() + " " + this.getApellido() +
