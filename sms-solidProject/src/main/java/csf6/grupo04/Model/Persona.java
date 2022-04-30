@@ -61,17 +61,4 @@ public class Persona {
         this.setEmail(valoremail);
         this.setTelefono(valortelefono);
     }
-
-    // Métodos
-    public String listarPersonas()
-    {
-        return "Nombre: " + this.getNombre() + " " + this.getApellido() +
-          "\nEdad: " + this.getEdad() +
-          "\nE-mail: " + this.getEmail() +
-          "\nTeléfono:" + this.getTelefono() +
-          "\n----------------------------------------";
-        //implementar añadir al .csv
-    }
 }
-
-
