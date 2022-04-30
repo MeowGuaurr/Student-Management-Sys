@@ -1,7 +1,5 @@
 Métodos a crear:
-- Listar estudiantes
-- Listar coaches
-- Listar administrativos
+- Listar personas(Estudiante, Coaches, Administrativo)
 - Registrar persona(Estudiante, Coaches, Administrativo)
 - Modificar datos de una persona
 - Listar cursos

@@ -36,11 +36,11 @@ public class Administrativo extends Persona{
     }
 
     public Administrativo(String nombre, String apellido, int edad, String email, int telefono, String id, String vdireccion, String vcargo) {
-        this.setNombre(nombre);
-        this.setApellido(apellido);
-        this.setEdad(edad);
-        this.setEmail(email);
-        this.setTelefono(telefono);
+        super.setNombre(nombre);
+        super.setApellido(apellido);
+        super.setEdad(edad);
+        super.setEmail(email);
+        super.setTelefono(telefono);
         this.setIdentificacion(id);
         this.setCargo(vcargo);
         this.setDireccion(vdireccion);

@@ -1,5 +1,7 @@
 package csf6.grupo04;
 
+import csf6.grupo04.Controller.ControllerCoach;
+
 import java.util.Scanner;
 
 public class Main {
@@ -48,8 +50,28 @@ public class Main {
                 imprimirLN("En proceso....");
             }
             case 4 -> {
-                imprimirLN("Registro de persona:");
-                imprimirLN("En proceso....");
+                int accionRegistro;
+                imprimirLN("""
+                Que quiere registrar:
+                01. Registrar estudiante.
+                02. Registrar coach.
+                03. Registrar personal administrativo.""");
+                imprimir("\nDigite el número: ");
+                accionRegistro = lector.nextInt();
+
+                while (accionRegistro < 1 || accionRegistro > 3){
+                    imprimir("--------------------------------------------");
+                    imprimirLN("Debe seleccionar un número de valido!");
+                    imprimir("\nDigite el número: ");
+                    accionRegistro = lector.nextInt();
+                    imprimir("--------------------------------------------\n");
+                }
+
+                switch (accionRegistro){
+                    case 1 -> imprimirLN("En proceso");
+                    case 2 -> ControllerCoach.registrarCSV();
+                    case 3 -> imprimirLN("En proceso...");
+                }
             }
             case 5 -> {
                 imprimirLN("Modificación de datos de persona:");

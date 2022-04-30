@@ -38,11 +38,11 @@ public class Estudiante extends Persona{
 
     public Estudiante(String nombre, String apellido, int edad, String email, int telefono, String valorcurso, Date inicio, Date fin)
     {
-        this.setNombre(nombre);
-        this.setApellido(apellido);
-        this.setEdad(edad);
-        this.setEmail(email);
-        this.setTelefono(telefono);
+        super.setNombre(nombre);
+        super.setApellido(apellido);
+        super.setEdad(edad);
+        super.setEmail(email);
+        super.setTelefono(telefono);
         this.setCurso(valorcurso);
         this.setFechaInicio(inicio);
         this.setFechaFin(fin);
