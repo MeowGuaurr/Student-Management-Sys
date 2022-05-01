@@ -3,11 +3,17 @@ import java.util.Date;
 
 public class Estudiante extends Persona{
     // Variables
+    private String carnet;
     private String curso;
     private Date fechaInicio;
     private Date fechaFin;
 
     // Getters y Setters
+
+    public String getCarnet() {return carnet;}
+
+    public void setCarnet(String carnet) {this.carnet = carnet;}
+
     public String getCurso() {
         return curso;
     }
@@ -36,29 +42,16 @@ public class Estudiante extends Persona{
     public Estudiante(){
     }
 
-    public Estudiante(String nombre, String apellido, int edad, String email, int telefono, String valorcurso, Date inicio, Date fin)
+    public Estudiante(String nombre, String apellido, int edad, String email, int telefono, String carnet, String valorcurso, Date inicio, Date fin)
     {
         super.setNombre(nombre);
         super.setApellido(apellido);
         super.setEdad(edad);
         super.setEmail(email);
         super.setTelefono(telefono);
+        this.setCarnet(carnet);
         this.setCurso(valorcurso);
         this.setFechaInicio(inicio);
         this.setFechaFin(fin);
-    }
-
-    // Métodos
-    public String registrarseEnCurso()
-    {
-        return "Nombre: " + this.getNombre() + " " + this.getApellido() +
-          "\nEdad: " + this.getEdad() +
-          "\nE-mail: " + this.getEmail() +
-          "\nTeléfono:" + this.getTelefono() +
-          "\nCurso: " + this.getCurso() +
-          "\nFecha de inicio: " + this.getFechaInicio() +
-          "\nHasta:" + this.getFechaFin() +
-          "\n----------------------------------------";
-        //implementar añadir al .csv
     }
 }

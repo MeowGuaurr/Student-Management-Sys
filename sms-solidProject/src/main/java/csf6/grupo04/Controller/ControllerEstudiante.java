@@ -23,6 +23,8 @@ public class ControllerEstudiante {
         person.setEmail(leer.nextLine());
         System.out.print("\nTelefono:");
         person.setTelefono(Integer.parseInt(leer.nextLine()));
+        System.out.println("\nCarnet:");
+        person.setCarnet(leer.nextLine());
         System.out.print("\nCurso:");
         person.setCurso(leer.nextLine());
         System.out.print("\nFecha de inicio:");
@@ -44,7 +46,8 @@ public class ControllerEstudiante {
 
         String[] data = {person.getNombre(), person.getApellido(),
                 person.getEdad()+"" , person.getEmail(), person.getTelefono()+"" ,
-                person.getCurso(), person.getFechaInicio()+"", person.getFechaFin()+""
+                person.getCarnet(), person.getCurso(),
+                person.getFechaInicio()+"", person.getFechaFin()+""
         };
 
         try {
