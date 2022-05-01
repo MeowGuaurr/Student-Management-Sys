@@ -2,6 +2,7 @@ package csf6.grupo04;
 
 import csf6.grupo04.Controller.ControllerAdministrativo;
 import csf6.grupo04.Controller.ControllerCoach;
+import csf6.grupo04.Controller.ControllerCurso;
 import csf6.grupo04.Controller.ControllerEstudiante;
 
 import java.util.Scanner;
@@ -83,10 +84,7 @@ public class Main {
                 imprimirLN("Lista de cursos:");
                 imprimirLN("En proceso....");
             }
-            case 7 -> {
-                imprimirLN("Añadir curso:");
-                imprimirLN("En proceso....");
-            }
+            case 7 -> ControllerCurso.registrarCurso();
             case 8 -> {
                 imprimirLN("Modificación de curso:");
                 imprimirLN("En proceso....");

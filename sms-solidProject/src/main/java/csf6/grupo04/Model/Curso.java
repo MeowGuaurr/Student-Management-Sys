@@ -8,7 +8,6 @@ public class Curso {
     private int vacantes;
     private int inscritos;
     private boolean finalizado;
-    //pendiente atributo coach
 
     // Getters y Setters
     public String getNombre() {
@@ -70,6 +69,4 @@ public class Curso {
         this.inscritos = inscritos;
     }
 
-    // Métodos
-    //pendiente métodos
 }
