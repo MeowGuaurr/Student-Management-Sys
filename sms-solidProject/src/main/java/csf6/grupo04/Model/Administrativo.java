@@ -46,6 +46,4 @@ public class Administrativo extends Persona{
         this.setDireccion(vdireccion);
     }
 
-    // Métodos
-    //pending: crear métodos
 }

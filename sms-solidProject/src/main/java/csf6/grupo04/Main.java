@@ -1,6 +1,8 @@
 package csf6.grupo04;
 
+import csf6.grupo04.Controller.ControllerAdministrativo;
 import csf6.grupo04.Controller.ControllerCoach;
+import csf6.grupo04.Controller.ControllerEstudiante;
 
 import java.util.Scanner;
 
@@ -68,9 +70,9 @@ public class Main {
                 }
 
                 switch (accionRegistro){
-                    case 1 -> imprimirLN("En proceso");
-                    case 2 -> ControllerCoach.registrarCSV();
-                    case 3 -> imprimirLN("En proceso...");
+                    case 1 -> ControllerEstudiante.registrarEstudiante();
+                    case 2 -> ControllerCoach.registrarCoach();
+                    case 3 -> ControllerAdministrativo.registrarAdmin();
                 }
             }
             case 5 -> {

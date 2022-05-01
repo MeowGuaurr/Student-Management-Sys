@@ -1,14 +1,14 @@
 package csf6.grupo04.Controller;
 
-import csf6.grupo04.Model.Coach;
+import csf6.grupo04.Model.Administrativo;
 import java.util.Scanner;
 
-public class ControllerCoach{
-    public static void registrarCoach(){
-        Coach person = new Coach();
+public class ControllerAdministrativo {
+    public static void registrarAdmin() {
+        Administrativo person = new Administrativo();
         Scanner leer = new Scanner(System.in);
 
-        System.out.println("REGISTRO DE COACH");
+        System.out.println("REGISTRO DE PERSONAL ADMINISTRATIVO");
         System.out.print("\nNombre:");
         person.setNombre(leer.nextLine());
         System.out.print("\nApellido:");
@@ -23,14 +23,16 @@ public class ControllerCoach{
         person.setIdentificacion(leer.nextLine());
         System.out.print("\nDireccion:");
         person.setDireccion(leer.nextLine());
+        System.out.print("\nCargo:");
+        person.setCargo(leer.nextLine());
 
         String[] data = {person.getNombre(), person.getApellido(),
                 person.getEdad()+"" , person.getEmail(), person.getTelefono()+"" ,
-                person.getIdentificacion(), person.getDireccion()
+                person.getIdentificacion(), person.getDireccion(), person.getCargo()
         };
 
         try {
-            CSV.writeInCSV("CSV\\Coach.csv", data);
+            CSV.writeInCSV("CSV\\Administrativo.csv", data);
             System.out.println("Registrado con exito!");
         }
         catch (Exception e){
