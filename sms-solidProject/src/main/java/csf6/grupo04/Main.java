@@ -77,10 +77,7 @@ public class Main {
                 imprimirLN("Modificación de datos de persona:");
                 imprimirLN("En proceso....");
             }
-            case 6 -> {
-                imprimirLN("Lista de cursos:");
-                imprimirLN("En proceso....");
-            }
+            case 6 -> ControllerCurso.verCursos();
             case 7 -> ControllerCurso.registrarCurso();
             case 8 -> {
                 imprimirLN("Modificación de curso:");

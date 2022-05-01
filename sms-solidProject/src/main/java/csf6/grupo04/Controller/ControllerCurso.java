@@ -1,6 +1,11 @@
 package csf6.grupo04.Controller;
 
+import com.opencsv.CSVReader;
+import com.opencsv.CSVReaderBuilder;
 import csf6.grupo04.Model.Curso;
+
+import java.io.FileReader;
+import java.util.List;
 import java.util.Scanner;
 
 public class ControllerCurso {
@@ -34,5 +39,9 @@ public class ControllerCurso {
         catch (Exception e){
             System.out.println("Error al ingresar al CSV");
         }
+    }
+
+    public static void verCursos() {
+        CSV.readInCSV("CSV\\Cursos.csv");
     }
 }

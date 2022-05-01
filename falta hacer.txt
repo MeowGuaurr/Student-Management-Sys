@@ -3,9 +3,9 @@ Métodos a crear:
 COMP		- Registrar persona(Estudiante, Coaches, Administrativo)
 		- Modificar datos de una persona
 		- Listar cursos
-		- Añadir cursos
+COMP		- Añadir cursos
 		- Modificar cursos
-		- Registrar evaluación
+COMP		- Registrar evaluación
 		- Listar las evaluaciones
 		- Abrir carpeta contenedora de trabajos
 
@@ -16,7 +16,7 @@ COMP		- Generar CSV
 		- Generar PDF
 		- Enviar email
 		- Listar de csv(para cada caso en especifico)
-		- Añadir a csv
+COMP		- Añadir a csv
 		- Modificar en csv
 		- Abrir carpetas del explorador de archivos/Abrir archivos
 
