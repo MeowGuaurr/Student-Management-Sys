@@ -36,9 +36,11 @@ public class CSV{
 
             for (String[] row : allData) {
                 for (String cell : row) {
-                    System.out.print(cell + "\t");
+                    System.out.print("\t\t-\t\t" + cell);
                 }
                 System.out.println();
+                System.out.println("\t\t\t -----------------------------------------------------------------------------------------" +
+                        "----------------------------------------------------------------------------------------------------- \t\t\t");
             }
         }
         catch (Exception e){
