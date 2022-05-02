@@ -37,18 +37,9 @@ public class Main {
         }
 
         switch (accion) {
-            case 1 -> {
-                imprimirLN("Lista de estudiantes:");
-                imprimirLN("En proceso....");
-            }
-            case 2 -> {
-                imprimirLN("Lista de coaches:");
-                imprimirLN("En proceso....");
-            }
-            case 3 -> {
-                imprimirLN("Lista de personal administrativo:");
-                imprimirLN("En proceso....");
-            }
+            case 1 -> ControllerEstudiante.verEstudiantes();
+            case 2 -> ControllerCoach.verCoaches();
+            case 3 -> ControllerAdministrativo.verAdmins();
             case 4 -> {
                 int accionRegistro;
                 imprimirLN("""
@@ -84,10 +75,7 @@ public class Main {
                 imprimirLN("En proceso....");
             }
             case 9 -> ControllerEvaluacion.registrarEvaluacion();
-            case 10 -> {
-                imprimirLN("Listar evaluaciones:");
-                imprimirLN("En proceso....");
-            }
+            case 10 -> ControllerEvaluacion.verEvaluaciones();
             case 11 -> {
                 imprimirLN("Abrir carpeta contenedora de archivos.");
                 imprimirLN("En proceso....");

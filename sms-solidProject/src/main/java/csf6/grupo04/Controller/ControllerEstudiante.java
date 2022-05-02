@@ -68,4 +68,8 @@ public class ControllerEstudiante {
         }
     }
 
+    public static void verEstudiantes() {
+        CSV.readInCSV("CSV\\Estudiante.csv");
+    }
+
 }

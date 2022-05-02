@@ -1,12 +1,12 @@
 Métodos a crear:
-		- Listar personas(Estudiante, Coaches, Administrativo)
+COMP		- Listar personas(Estudiante, Coaches, Administrativo)
 COMP		- Registrar persona(Estudiante, Coaches, Administrativo)
 		- Modificar datos de una persona
-		- Listar cursos
+COMP		- Listar cursos
 COMP		- Añadir cursos
 		- Modificar cursos
 COMP		- Registrar evaluación
-		- Listar las evaluaciones
+COMP		- Listar las evaluaciones
 		- Abrir carpeta contenedora de trabajos
 
 Interfaces:
@@ -15,7 +15,7 @@ Funciones:
 COMP		- Generar CSV
 		- Generar PDF
 		- Enviar email
-		- Listar de csv(para cada caso en especifico)
+COMP		- Listar de csv(para cada caso en especifico)
 COMP		- Añadir a csv
 		- Modificar en csv
 		- Abrir carpetas del explorador de archivos/Abrir archivos
