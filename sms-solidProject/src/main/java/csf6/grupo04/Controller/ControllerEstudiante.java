@@ -57,7 +57,7 @@ public class ControllerEstudiante {
             System.out.println("Registrado con exito!");
 
             String title = "Información de estudiante";
-            PDF.writePDF("PDF//Estudiante.pdf", title, data);
+            PDF.writePDF("PDF\\Estudiante.pdf", title, data);
 
             EMAIL.sendEmail(email);
             System.out.println("Información enviada con exito!");
