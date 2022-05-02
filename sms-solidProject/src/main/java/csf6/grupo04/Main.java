@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);
         int repetir = 1;
-        int accionRegistro, accionBusqueda;
+        int accionRegistro, accionBusqueda, accionEvaluacion;
 
         while (repetir == 1){
             switch (menu()) {
@@ -68,7 +68,27 @@ public class Main {
                 case 6 -> ControllerCurso.verCursos();
                 case 7 -> ControllerCurso.registrarCurso();
                 case 8 -> ControllerCurso.buscarCursos();
-                case 9 -> ControllerEvaluacion.registrarEvaluacion();
+                case 9 -> {
+                    imprimirLN("""
+                Tipo de evaluacion:
+                01. Evaluacion normal.
+                02. Evaluacion tipo programa (Entrega de software).""");
+                    imprimir("\nDigite el número: ");
+                    accionEvaluacion = lector.nextInt();
+
+                    while (accionEvaluacion < 1 || accionEvaluacion > 2){
+                        imprimir("--------------------------------------------");
+                        imprimirLN("Debe seleccionar un número de valido!");
+                        imprimir("\nDigite el número: ");
+                        accionEvaluacion = lector.nextInt();
+                        imprimir("--------------------------------------------\n");
+                    }
+
+                    switch (accionEvaluacion){
+                        case 1 -> ControllerEvaluacion.registrarEvaluacion();
+                        case 2 -> ControllerEvaluacion.registrarProgramas();
+                    }
+                }
                 case 10 -> ControllerEvaluacion.verEvaluaciones();
             }
 
