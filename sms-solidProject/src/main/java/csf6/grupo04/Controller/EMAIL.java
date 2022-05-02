@@ -12,20 +12,20 @@ public class EMAIL {
         final String password = "CSFcourse2022";
         String from = "galanreyna00@gmail.com";
 
-        Properties properties = new Properties();
-        properties.put("mail.smtp.auth", true);
-        properties.put("mail.smtp.starttls.enable", true);
-        properties.put("mail.smtp.host", "smtp.gmail.com");
-        properties.put("mail.smtp.port", 587);
-        properties.put("mail.transport.protocol", "smtp");
+        Properties props = new Properties();
+        props.put("mail.smtp.auth", true);
+        props.put("mail.smtp.host", "smtp.gmail.com");
+        props.put("mail.smtp.port", 587);
+        props.put("mail.smtp.starttls.enable", true);
+        props.put("mail.transport.protocol", "smtp");
 
-        Session session = Session.getInstance(properties, new Authenticator()
-        {
-            protected PasswordAuthentication getPasswordAuthentcation()
-            {
-                return new PasswordAuthentication(username, password);
+        Session session = Session.getInstance(props, new Authenticator() {
+            @Override
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication("galanreyna00@gmail.com", "CSFcourse2022");
             }
         });
+
 
         MimeMessage message = new MimeMessage(session);
         try
