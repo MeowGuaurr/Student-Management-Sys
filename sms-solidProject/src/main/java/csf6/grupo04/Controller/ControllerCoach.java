@@ -32,6 +32,10 @@ public class ControllerCoach{
         try {
             CSV.writeInCSV("CSV\\Coach.csv", data);
             System.out.println("Registrado con exito!");
+
+            String title = "Información de coach";
+            PDF.writePDF("PDF\\Coach.pdf", title, data);
+            System.out.println("Información generada con exito!");
         }
         catch (Exception e){
             System.out.println("Error al ingresar al CSV");

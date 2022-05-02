@@ -34,6 +34,10 @@ public class ControllerAdministrativo {
         try {
             CSV.writeInCSV("CSV\\Administrativo.csv", data);
             System.out.println("Registrado con exito!");
+
+            String title = "Información de personal";
+            PDF.writePDF("PDF\\Administrativo.pdf", title, data);
+            System.out.println("Información generada con exito!");
         }
         catch (Exception e){
             System.out.println("Error al ingresar al CSV");

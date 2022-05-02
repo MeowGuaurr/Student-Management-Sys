@@ -12,7 +12,7 @@ public class ControllerEstudiante {
         Scanner leer = new Scanner(System.in);
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
-        System.out.println("REGISTRO DE PERSONAL ADMINISTRATIVO");
+        System.out.println("REGISTRO DE ESTUDIANTE");
         System.out.print("\nNombre:");
         person.setNombre(leer.nextLine());
         System.out.print("\nApellido:");
@@ -53,9 +53,14 @@ public class ControllerEstudiante {
         try {
             CSV.writeInCSV("CSV\\Estudiante.csv", data);
             System.out.println("Registrado con exito!");
+
+            String title = "Información de estudiante";
+            PDF.writePDF("PDF\\Estudiante.pdf", title, data);
+            System.out.println("Información generada con exito!");
         }
         catch (Exception e){
             System.out.println("Error al ingresar al CSV");
+            System.out.println("Error al ingresar al PDF");
         }
     }
 
