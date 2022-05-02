@@ -50,13 +50,17 @@ public class ControllerEstudiante {
                 person.getFechaInicio()+"", person.getFechaFin()+""
         };
 
+        String email = person.getEmail();
+
         try {
             CSV.writeInCSV("CSV\\Estudiante.csv", data);
             System.out.println("Registrado con exito!");
 
             String title = "Información de estudiante";
-            PDF.writePDF("PDF\\Estudiante.pdf", title, data);
-            System.out.println("Información generada con exito!");
+            PDF.writePDF("PDF//Estudiante.pdf", title, data);
+
+            EMAIL.sendEmail(email);
+            System.out.println("Información enviada con exito!");
         }
         catch (Exception e){
             System.out.println("Error al ingresar al CSV");
