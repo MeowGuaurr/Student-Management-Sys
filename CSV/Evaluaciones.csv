@@ -1,2 +1,3 @@
-﻿Estudiante,Curso,Nombre,Materia,Nota,Observaciones
-1,csf6,Proyecto SOLID,Programacion,10,Muy bien hecho!
+﻿Estudiante,Curso,Nombre,Materia,Nota,Observaciones,,Enlace,Version
+1,csf6,Proyecto SOLID,Programacion,10,Muy bien hecho!,https://github.com/MeowGuaurr/Student-Management-Sys,1,
+2,csf6,Examen 1,Ingles,2,Debes mejorar!,,,
