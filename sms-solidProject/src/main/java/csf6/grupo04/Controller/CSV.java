@@ -61,7 +61,7 @@ public class CSV{
                         System.out.println("Se encontro una coincidencia:");
 
                         for (int j = 0; j < parts.length; j++){
-                            System.out.print("hola");
+                            System.out.print("\t\t-\t\t" + parts[j]);
                         }
 
                         found = true;
