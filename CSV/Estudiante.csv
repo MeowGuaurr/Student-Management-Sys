@@ -1,3 +1,6 @@
-﻿Nombre,Apellido,Edad,email,Telefono,Carnet,Curso,Inicio,Fin
-"Reyna","Galan","20","reynamgcontreras@gmail.com","0","0001","csf6","Fri Apr 01 00:00:00 CST 2022","Wed Jun 01 00:00:00 CST 2022"
-"Josue","Cortez","24","josue.cortez222@gmail.com","0","0002","csf6","Fri Apr 01 00:00:00 CST 2022","Wed Jun 01 00:00:00 CST 2022"
+﻿Carnet,Nombre,Apellido,Edad,email,Telefono,Curso,Inicio,Fin
+1,Reyna,Galan,20,reynamgcontreras@gmail.com,0,csf6,Fri Apr 01 00:00:00 CST 2022,Wed Jun 01 00:00:00 CST 2022
+2,Josue,Cortez,24,josue.cortez222@gmail.com,0,csf6,Fri Apr 01 00:00:00 CST 2022,Wed Jun 01 00:00:00 CST 2022
+3,David,Aguilar,24,josue.cortez222@gmail.com,0,fsj6,Sun May 01 00:00:00 CST 2022,Thu Dec 01 00:00:00 CST 2022
+7,Cortez,Aguilar,24,josue.cortez222@gmail.com,0,fsj6,Sat Oct 10 00:00:00 CST 2020,Mon Oct 10 00:00:00 CST 2022
+10,prueba,tutu,22,josue.cortez222@gmail.com,222222,dd,Fri Jan 10 00:00:00 CST 2020,Mon May 20 00:00:00 CST 2013

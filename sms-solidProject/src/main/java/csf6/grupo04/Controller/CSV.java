@@ -1,13 +1,11 @@
 package csf6.grupo04.Controller;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.*;
 
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import com.opencsv.CSVWriter;
-import java.io.IOException;
+
 import java.util.List;
 
 public class CSV{
@@ -44,6 +42,39 @@ public class CSV{
             }
         }
         catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void searchInCSV(String filePath, String id){
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(filePath));
+            boolean found = false;
+            String line = null;
+
+            while ((line = reader.readLine()) != null){
+                String [] parts = line.split(",");
+                int totalParts = parts.length;
+
+                for (int i = 0; i < totalParts; i++){
+                    if (id.compareTo(parts[i]) == 0){
+                        System.out.println("Se encontro una coincidencia:");
+
+                        for (int j = 0; j < parts.length; j++){
+                            System.out.print("hola");
+                        }
+
+                        found = true;
+                        break;
+                    }
+                }
+            }
+
+            if (found == false) {
+                System.out.println("No se encontro ninguna coincidencia.");
+            }
+        }
+        catch (IOException e){
             e.printStackTrace();
         }
     }

@@ -27,9 +27,9 @@ public class ControllerCoach{
         System.out.print("\nDireccion:");
         person.setDireccion(leer.nextLine());
 
-        String[] data = {person.getNombre(), person.getApellido(),
-                person.getEdad()+"" , person.getEmail(), person.getTelefono()+"" ,
-                person.getIdentificacion(), person.getDireccion()
+        String[] data = {person.getIdentificacion(), person.getNombre(),
+                person.getApellido(), person.getEdad()+"" , person.getEmail(),
+                person.getTelefono()+"" , person.getDireccion()
         };
 
         try {
@@ -62,5 +62,21 @@ public class ControllerCoach{
 
     public static void verCoaches() {
         CSV.readInCSV("CSV\\Coach.csv");
+    }
+
+    public static void buscarCoach() {
+        Scanner leer = new Scanner(System.in);
+        String id;
+
+        System.out.println("BUSQUEDA DE COACH");
+        System.out.print("Digite el identificador del coach:");
+        id = leer.nextLine();
+
+        try {
+            CSV.searchInCSV("CSV\\Coach.csv", id);
+        }
+        catch (Exception e){
+            System.out.println("Error al ejecutar la busqueda");
+        }
     }
 }

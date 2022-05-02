@@ -27,7 +27,7 @@ public class ControllerCurso {
         System.out.print("\nFinalizado (True/False):");
         course.setFinalizado(leer.nextBoolean());
 
-        String[] data = {course.getNombre(), course.getCodigo(),
+        String[] data = {course.getCodigo(), course.getNombre(),
                 course.getAnnio()+"" , course.getVacantes()+"", course.getInscritos()+"" ,
                 course.isFinalizado()+""
         };
@@ -43,5 +43,21 @@ public class ControllerCurso {
 
     public static void verCursos() {
         CSV.readInCSV("CSV\\Cursos.csv");
+    }
+
+    public static void buscarCursos() {
+        Scanner leer = new Scanner(System.in);
+        String id;
+
+        System.out.println("BUSQUEDA DE CURSO");
+        System.out.print("Digite el codigo del curso:");
+        id = leer.nextLine();
+
+        try {
+            CSV.searchInCSV("CSV\\Cursos.csv", id);
+        }
+        catch (Exception e){
+            System.out.println("Error al ejecutar la busqueda");
+        }
     }
 }

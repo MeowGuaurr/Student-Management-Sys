@@ -1,3 +1,5 @@
-﻿Nombre,Codigo,Año,Vacantes,Inscritos,Finalizado
-"Computer Science Fundamentals","csf6","2022","100","30","false"
-"Full Stack Junior","fsj6","2022","100","50","false"
+﻿Codigo,Nombre,Año,Vacantes,Inscritos,Finalizado
+csf6,Computer Science Fundamentals,2022,100,30,FALSE
+fsj6,Full Stack Junior,2022,100,50,FALSE
+ppb,Prueba,2022,100,1,TRUE
+prueba 2,ppb2,2022,20,20,FALSE

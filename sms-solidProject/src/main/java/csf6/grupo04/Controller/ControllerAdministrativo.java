@@ -29,9 +29,9 @@ public class ControllerAdministrativo {
         System.out.print("\nCargo:");
         person.setCargo(leer.nextLine());
 
-        String[] data = {person.getNombre(), person.getApellido(),
-                person.getEdad()+"" , person.getEmail(), person.getTelefono()+"" ,
-                person.getIdentificacion(), person.getDireccion(), person.getCargo()
+        String[] data = {person.getIdentificacion(), person.getNombre(),
+                person.getApellido(), person.getEdad()+"" , person.getEmail(), person.getTelefono()+"",
+                person.getDireccion(), person.getCargo()
         };
 
         try {
@@ -64,5 +64,21 @@ public class ControllerAdministrativo {
 
     public static void verAdmins() {
         CSV.readInCSV("CSV\\Administrativo.csv");
+    }
+
+    public static void buscarAdmin() {
+        Scanner leer = new Scanner(System.in);
+        String id;
+
+        System.out.println("BUSQUEDA DE PERSONAL ADMINISTRATIVO");
+        System.out.print("Digite el identificador del personal:");
+        id = leer.nextLine();
+
+        try {
+            CSV.searchInCSV("CSV\\Administrativo.csv", id);
+        }
+        catch (Exception e){
+            System.out.println("Error al ejecutar la busqueda");
+        }
     }
 }

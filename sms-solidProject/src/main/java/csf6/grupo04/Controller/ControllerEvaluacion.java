@@ -24,9 +24,9 @@ public class ControllerEvaluacion {
         System.out.print("\nEstudiante:");
         eva.setCarnetEstudiante(leer.nextLine());
 
-        String[] data = {eva.getNombre(), eva.getMateria(),
-                eva.getNota()+"" , eva.getObservaciones(),
-                eva.getCodigoCurso(), eva.getCarnetEstudiante()
+        String[] data = {eva.getCarnetEstudiante(), eva.getCodigoCurso(),
+                eva.getNombre(), eva.getMateria(),
+                eva.getNota()+"" , eva.getObservaciones()
         };
 
         try {

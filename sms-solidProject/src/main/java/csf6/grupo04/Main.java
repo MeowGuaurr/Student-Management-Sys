@@ -12,6 +12,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);
         int repetir = 1;
+        int accionRegistro, accionBusqueda;
 
         while (repetir == 1){
             switch (menu()) {
@@ -19,7 +20,6 @@ public class Main {
                 case 2 -> ControllerCoach.verCoaches();
                 case 3 -> ControllerAdministrativo.verAdmins();
                 case 4 -> {
-                    int accionRegistro;
                     imprimirLN("""
                 Que quiere registrar:
                 01. Registrar estudiante.
@@ -43,15 +43,31 @@ public class Main {
                     }
                 }
                 case 5 -> {
-                    imprimirLN("Modificación de datos de persona:");
-                    imprimirLN("En proceso....");
+                    imprimirLN("""
+                Que quiere buscar:
+                01. Buscar estudiante.
+                02. Buscar coach.
+                03. Buscar personal administrativo.""");
+                    imprimir("\nDigite el número: ");
+                    accionBusqueda = lector.nextInt();
+
+                    while (accionBusqueda < 1 || accionBusqueda > 3){
+                        imprimir("--------------------------------------------");
+                        imprimirLN("Debe seleccionar un número de valido!");
+                        imprimir("\nDigite el número: ");
+                        accionBusqueda = lector.nextInt();
+                        imprimir("--------------------------------------------\n");
+                    }
+
+                    switch (accionBusqueda){
+                        case 1 -> ControllerEstudiante.buscarEstudiante();
+                        case 2 -> ControllerCoach.buscarCoach();
+                        case 3 -> ControllerAdministrativo.buscarAdmin();
+                    }
                 }
                 case 6 -> ControllerCurso.verCursos();
                 case 7 -> ControllerCurso.registrarCurso();
-                case 8 -> {
-                    imprimirLN("Modificación de curso:");
-                    imprimirLN("En proceso....");
-                }
+                case 8 -> ControllerCurso.buscarCursos();
                 case 9 -> ControllerEvaluacion.registrarEvaluacion();
                 case 10 -> ControllerEvaluacion.verEvaluaciones();
             }
@@ -85,10 +101,10 @@ public class Main {
                 02. Listar los coaches.
                 03. Listar al personal administrativo.
                 04. Registrar una persona.
-                05. Modificar los datos de una persona.
+                05. Buscar a una persona.
                 06. Listar los cursos.
                 07. Añadir un curso nuevo.
-                08. Modificar un curso.
+                08. Buscar un curso.
                 09. Registrar una evaluación.
                 10. Listar las evaluaciones.""");
         imprimir("\nDigite el número: ");

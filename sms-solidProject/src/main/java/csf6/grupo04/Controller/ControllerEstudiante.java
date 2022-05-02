@@ -46,9 +46,9 @@ public class ControllerEstudiante {
             e.printStackTrace();
         }
 
-        String[] data = {person.getNombre(), person.getApellido(),
-                person.getEdad()+"" , person.getEmail(), person.getTelefono()+"" ,
-                person.getCarnet(), person.getCurso(),
+        String[] data = {person.getCarnet(), person.getNombre(),
+                person.getApellido(), person.getEdad()+"" , person.getEmail(),
+                person.getTelefono()+"" , person.getCurso(),
                 person.getFechaInicio()+"", person.getFechaFin()+""
         };
 
@@ -85,4 +85,19 @@ public class ControllerEstudiante {
         CSV.readInCSV("CSV\\Estudiante.csv");
     }
 
+    public static void buscarEstudiante() {
+        Scanner leer = new Scanner(System.in);
+        String id;
+
+        System.out.println("BUSQUEDA DE ESTUDIANTE");
+        System.out.print("Digite el carnet del estudiante:");
+        id = leer.nextLine();
+
+        try {
+            CSV.searchInCSV("CSV\\Estudiante.csv", id);
+        }
+        catch (Exception e){
+            System.out.println("Error al ejecutar la busqueda");
+        }
+    }
 }

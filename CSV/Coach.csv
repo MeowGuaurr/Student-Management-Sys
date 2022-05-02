@@ -1,2 +1,2 @@
-﻿Nombre,Apellido,Edad,email,Telefono,Identificación,Dirección
-"Carlos","Tejada","28","josue.cortez222@gmail.com","0","0001","Algun lugar de una gran pais."
+﻿Identificación,Nombre,Apellido,Edad,email,Telefono,Dirección
+1,Carlos,Tejada,28,josue.cortez222@gmail.com,0,Algun lugar de una gran pais.

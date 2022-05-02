@@ -1,2 +1,2 @@
-﻿Nombre,Materia,Nota,Observaciones,Curso,Estudiante
-"Proyecto SOLID","Programacion","10.0","Muy bien hecho!","csf6","0001"
+﻿Estudiante,Curso,Nombre,Materia,Nota,Observaciones
+1,csf6,Proyecto SOLID,Programacion,10,Muy bien hecho!

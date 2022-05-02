@@ -1,2 +1,2 @@
-﻿Nombre,Apellido,Edad,email,Telefono,Identificación,Dirección,Cargo
-"Josselyn","Quintanilla","26","josue.cortez222@gmail.com","0","0001","Otro lugar, de un gran pais.","Coordinadora"
+﻿Identificación,Nombre,Apellido,Edad,email,Telefono,Dirección,Cargo
+1,Josselyn,Quintanilla,26,josue.cortez222@gmail.com,0,"Otro lugar, de un gran pais.",Coordinadora
