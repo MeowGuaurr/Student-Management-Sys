@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class EMAIL {
-    public static void sendEmail(String email){
+    public static void sendEmail(String email, String filePath){
         final String username = "galanreyna00@gmail.com";
         final String password = "CSFcourse2022";
         String from = "galanreyna00@gmail.com";
@@ -37,13 +37,12 @@ public class EMAIL {
             Multipart content = new MimeMultipart();
             MimeBodyPart pdf = new MimeBodyPart();
 
-            File file = new File("info.pdf");
+            File file = new File(filePath);
             pdf.attachFile(file);
             content.addBodyPart(pdf);
 
             message.setContent(content);
             Transport.send(message);
-            System.out.println("Enviado");
         }
         catch(MessagingException e)
         {

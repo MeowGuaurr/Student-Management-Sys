@@ -1,7 +1,9 @@
 package csf6.grupo04.Controller;
 
+import com.itextpdf.text.DocumentException;
 import csf6.grupo04.Model.Estudiante;
 
+import java.io.FileNotFoundException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Scanner;
@@ -19,15 +21,15 @@ public class ControllerEstudiante {
         person.setApellido(leer.nextLine());
         System.out.print("\nEdad:");
         person.setEdad(Integer.parseInt(leer.nextLine()));
-        System.out.print("\nEmail:");
+        System.out.print("\nEmail (example@example.com):");
         person.setEmail(leer.nextLine());
-        System.out.print("\nTelefono:");
+        System.out.print("\nTelefono (Número sin guiones):");
         person.setTelefono(Integer.parseInt(leer.nextLine()));
-        System.out.println("\nCarnet:");
+        System.out.print("\nCarnet:");
         person.setCarnet(leer.nextLine());
         System.out.print("\nCurso:");
         person.setCurso(leer.nextLine());
-        System.out.print("\nFecha de inicio:");
+        System.out.print("\nFecha de inicio (dd/MM/yyyy):");
         String startDate = leer.nextLine();
         try {
             person.setFechaInicio(sdf.parse(startDate));
@@ -35,7 +37,7 @@ public class ControllerEstudiante {
         catch (ParseException e){
             e.printStackTrace();
         }
-        System.out.print("\nFecha de fin:");
+        System.out.print("\nFecha de fin (dd/MM/yyyy):");
         String endDate = leer.nextLine();
         try {
             person.setFechaFin(sdf.parse(endDate));
@@ -50,21 +52,32 @@ public class ControllerEstudiante {
                 person.getFechaInicio()+"", person.getFechaFin()+""
         };
 
-        String email = person.getEmail();
-
         try {
             CSV.writeInCSV("CSV\\Estudiante.csv", data);
-            System.out.println("Registrado con exito!");
-
-            String title = "Información de estudiante";
-            PDF.writePDF("PDF\\Estudiante.pdf", title, data);
-
-            EMAIL.sendEmail(email);
-            System.out.println("Información enviada con exito!");
+            System.out.println("\nRegistrado con exito!");
         }
         catch (Exception e){
+            e.printStackTrace();
             System.out.println("Error al ingresar al CSV");
-            System.out.println("Error al ingresar al PDF");
+        }
+
+        try {
+            String title = "Información de estudiante";
+            PDF.writePDF("PDF\\Estudiante.pdf", title, data);
+            System.out.println("Información generada con exito!");
+        } catch (DocumentException e) {
+            throw new RuntimeException(e);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+        try {
+            EMAIL.sendEmail(person.getEmail(), "PDF\\Estudiante.pdf");
+            System.out.println("Información enviada con exito!");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Error al ingresar al enviar la informacion");
         }
     }
 

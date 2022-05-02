@@ -56,13 +56,12 @@ public class Main {
                 case 10 -> ControllerEvaluacion.verEvaluaciones();
             }
 
-            System.out.print("\033[H\033[2J");
-            System.out.flush();
             imprimirLN("""
-                    Desea realizar otra acción:" +
+                    \nDesea realizar otra acción:
                     1. Si.
                     2. No.
                     """);
+            imprimir("Digite el número: ");
             repetir = lector.nextInt();
         }
     }

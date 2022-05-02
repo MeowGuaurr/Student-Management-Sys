@@ -16,7 +16,7 @@ import com.itextpdf.text.pdf.PdfWriter;
 public class PDF {
     public static void writePDF(String filePath, String title, String[] data) throws FileNotFoundException, DocumentException{
         Document doc = new Document();
-        FileOutputStream fpath = new FileOutputStream("info.pdf");
+        FileOutputStream fpath = new FileOutputStream(filePath);
         PdfWriter.getInstance(doc, fpath);
         doc.open();
         Paragraph pdftitle = new Paragraph(title,
@@ -45,8 +45,5 @@ public class PDF {
 
         doc.add(pdfbody);
         doc.close();
-        System.out.println("add:"+" "+pdfbody);
-        //return doc;
-
     }
 }

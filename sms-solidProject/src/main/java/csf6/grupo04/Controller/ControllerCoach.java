@@ -1,6 +1,9 @@
 package csf6.grupo04.Controller;
 
+import com.itextpdf.text.DocumentException;
 import csf6.grupo04.Model.Coach;
+
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class ControllerCoach{
@@ -15,9 +18,9 @@ public class ControllerCoach{
         person.setApellido(leer.nextLine());
         System.out.print("\nEdad:");
         person.setEdad(Integer.parseInt(leer.nextLine()));
-        System.out.print("\nEmail:");
+        System.out.print("\nEmail (example@example.com):");
         person.setEmail(leer.nextLine());
-        System.out.print("\nTelefono:");
+        System.out.print("\nTelefono (Número sin guiones):");
         person.setTelefono(Integer.parseInt(leer.nextLine()));
         System.out.print("\nIdentificacion:");
         person.setIdentificacion(leer.nextLine());
@@ -32,13 +35,28 @@ public class ControllerCoach{
         try {
             CSV.writeInCSV("CSV\\Coach.csv", data);
             System.out.println("Registrado con exito!");
-
-            String title = "Información de coach";
-            PDF.writePDF("PDF\\Coach.pdf", title, data);
-            System.out.println("Información generada con exito!");
         }
         catch (Exception e){
             System.out.println("Error al ingresar al CSV");
+        }
+
+        try {
+            String title = "Información de coach";
+            PDF.writePDF("PDF\\Coach.pdf", title, data);
+            System.out.println("Información generada con exito!");
+        } catch (DocumentException e) {
+            throw new RuntimeException(e);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+        try {
+            EMAIL.sendEmail(person.getEmail(), "PDF\\Coach.pdf");
+            System.out.println("Información enviada con exito!");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Error al ingresar al enviar la informacion");
         }
     }
 

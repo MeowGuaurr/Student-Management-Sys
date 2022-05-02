@@ -24,7 +24,7 @@ public class ControllerCurso {
         course.setVacantes(Integer.parseInt(leer.nextLine()));
         System.out.print("\nInscritos:");
         course.setInscritos(Integer.parseInt(leer.nextLine()));
-        System.out.print("\nFinalizado:");
+        System.out.print("\nFinalizado (True/False):");
         course.setFinalizado(leer.nextBoolean());
 
         String[] data = {course.getNombre(), course.getCodigo(),
