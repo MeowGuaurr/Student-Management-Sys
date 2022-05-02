@@ -32,7 +32,7 @@ public class PDF {
         StringJoiner text = new StringJoiner(" ");
         for(int i = 0; i < data.length; i++)
         {
-            text.add(data[i]+" ");
+            text.add(data[i]+"  ,");
         }
         String plaintext = text.toString();
 
