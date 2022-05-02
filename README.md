@@ -3,7 +3,7 @@
 ## 🎓 Sistema de gestión de estudiantes
 
 <p align="center">
-  <img src="./Recursos/uml.png" alt="UML" width="720">
+  <img src="./Recursos/uml.jpeg" alt="UML" width="720">
 </p>
 
 ## ✒️ Autores
