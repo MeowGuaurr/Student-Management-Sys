@@ -44,4 +44,7 @@ public class ControllerAdministrativo {
         }
     }
 
+    public static void verAdmins() {
+        CSV.readInCSV("CSV\\Administrativo.csv");
+    }
 }

@@ -37,4 +37,8 @@ public class ControllerEvaluacion {
             System.out.println("Error al ingresar al CSV");
         }
     }
+
+    public static void verEvaluaciones() {
+        CSV.readInCSV("CSV\\Evaluaciones.csv");
+    }
 }

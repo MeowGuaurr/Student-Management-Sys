@@ -42,4 +42,7 @@ public class ControllerCoach{
         }
     }
 
+    public static void verCoaches() {
+        CSV.readInCSV("CSV\\Coach.csv");
+    }
 }
