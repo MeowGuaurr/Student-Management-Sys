@@ -1,6 +1,10 @@
 package csf6.grupo04;
 
-import csf6.grupo04.Controller.*;
+import csf6.grupo04.Controller.ControllerAdministrativo;
+import csf6.grupo04.Controller.ControllerCoach;
+import csf6.grupo04.Controller.ControllerCurso;
+import csf6.grupo04.Controller.ControllerEstudiante;
+import csf6.grupo04.Controller.ControllerEvaluacion;
 
 import java.util.Scanner;
 
