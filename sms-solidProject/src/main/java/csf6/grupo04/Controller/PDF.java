@@ -14,7 +14,7 @@ import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
 
 public class PDF {
-    public static void writePDF(String filePath, String title, String[] data) throws FileNotFoundException, DocumentException{
+    public static void writePDF(String filePath, String title, String[] data, int action) throws FileNotFoundException, DocumentException{
         Document doc = new Document();
         FileOutputStream fpath = new FileOutputStream(filePath);
         PdfWriter.getInstance(doc, fpath);
@@ -30,20 +30,64 @@ public class PDF {
         doc.add(pdftitle);
 
         StringJoiner text = new StringJoiner(" ");
-        for(int i = 0; i < data.length; i++)
+        switch (action)
         {
-            text.add(data[i]+"  ,");
+            case 1 ->
+                    {
+                            text.add("Identificación: " + data[0] + "\n");
+                            text.add("Nombre completo: "+ data[1] + " " + data[2] + "\n");
+                            text.add("Edad: " + data[3] + "\n");
+                            text.add("Teléfono: " + data[5] + "\n");
+                            text.add("Dirección: " + data[6] + "\n");
+                            text.add("Cargo: " + data[7] + "\n");
+                        String plaintext = text.toString();
+
+                        Paragraph pdfbody = new Paragraph(plaintext,
+                                FontFactory.getFont("arial",
+                                        20,
+                                        BaseColor.BLACK
+                                )
+                        );
+                        doc.add(pdfbody);
+                    }
+            case 2 ->
+                    {
+                            text.add("Identificación: " + data[0] + "\n");
+                            text.add("Nombre completo: "+ data[1] + " " + data[2] + "\n");
+                            text.add("Edad: " + data[3] + "\n");
+                            text.add("Teléfono: " + data[5] + "\n");
+                            text.add("Dirección: " + data[6] + "\n");
+                        String plaintext = text.toString();
+
+                        Paragraph pdfbody = new Paragraph(plaintext,
+                                FontFactory.getFont("arial",
+                                        20,
+                                        BaseColor.BLACK
+                                )
+                        );
+                        doc.add(pdfbody);
+                    }
+
+            case 3 ->
+                    {
+                            text.add("Carnet estudiantil: " + data[0] + "\n");
+                            text.add("Nombre completo: "+ data[1] + " " + data[2] + "\n");
+                            text.add("Edad: " + data[3] + "\n");
+                            text.add("Teléfono: " + data[5] + "\n");
+                            text.add("Curso: " + data[6] + "\n");
+                            text.add("Estdiante desde: " + data[7] + " hasta: " + data[8] + "\n");
+                        String plaintext = text.toString();
+
+                        Paragraph pdfbody = new Paragraph(plaintext,
+                                FontFactory.getFont("arial",
+                                        20,
+                                        BaseColor.BLACK
+                                )
+                        );
+                        doc.add(pdfbody);
+                    }
         }
-        String plaintext = text.toString();
 
-        Paragraph pdfbody = new Paragraph(plaintext,
-                FontFactory.getFont("arial",
-                        20,
-                        BaseColor.BLACK
-                )
-        );
-
-        doc.add(pdfbody);
         doc.close();
     }
 }

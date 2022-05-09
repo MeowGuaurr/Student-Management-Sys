@@ -22,7 +22,7 @@ public class EMAIL {
         Session session = Session.getInstance(props, new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("galanreyna00@gmail.com", "CSFcourse2022");
+                return new PasswordAuthentication(username, password);
             }
         });
 
@@ -33,9 +33,14 @@ public class EMAIL {
             Address addressTo = new InternetAddress(email);
             message.setRecipient(Message.RecipientType.TO, addressTo);
             message.setSubject("Student Management System");
+            String msg = "Te saluda Student Management System, este es un mensaje de información sobre nuevo registro";
 
             Multipart content = new MimeMultipart();
+            MimeBodyPart body = new MimeBodyPart();
             MimeBodyPart pdf = new MimeBodyPart();
+
+            body.setContent(msg, "text/html; charset=utf-8");
+            content.addBodyPart(body);
 
             File file = new File(filePath);
             pdf.attachFile(file);
