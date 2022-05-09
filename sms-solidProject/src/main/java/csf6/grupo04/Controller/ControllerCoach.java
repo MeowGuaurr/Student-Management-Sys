@@ -31,7 +31,8 @@ public class ControllerCoach{
                 person.getApellido(), person.getEdad()+"" , person.getEmail(),
                 person.getTelefono()+"" , person.getDireccion()
         };
-
+        String title = "Información de coach";
+        int action = 2;
         try {
             CSV.writeInCSV("CSV\\Coach.csv", data);
             System.out.println("Registrado con exito!");
@@ -41,12 +42,15 @@ public class ControllerCoach{
         }
 
         try {
-            String title = "Información de coach";
-            PDF.writePDF("PDF\\Coach.pdf", title, data);
+
+            PDF.writePDF("PDF\\Coach.pdf", title, data, action);
             System.out.println("Información generada con exito!");
-        } catch (DocumentException e) {
+        }
+        catch (DocumentException e) {
             throw new RuntimeException(e);
-        } catch (FileNotFoundException e) {
+        }
+        catch (FileNotFoundException e)
+        {
             throw new RuntimeException(e);
         }
 

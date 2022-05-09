@@ -34,6 +34,7 @@ public class ControllerAdministrativo {
                 person.getDireccion(), person.getCargo()
         };
 
+        int action = 1;
         try {
             CSV.writeInCSV("CSV\\Administrativo.csv", data);
             System.out.println("\nRegistrado con exito!");
@@ -44,7 +45,7 @@ public class ControllerAdministrativo {
 
         try {
             String title = "Información de personal";
-            PDF.writePDF("PDF\\Administrativo.pdf", title, data);
+            PDF.writePDF("PDF\\Administrativo.pdf", title, data, action);
             System.out.println("Información generada con exito!");
         } catch (DocumentException e) {
             throw new RuntimeException(e);

@@ -51,6 +51,8 @@ public class ControllerEstudiante {
                 person.getTelefono()+"" , person.getCurso(),
                 person.getFechaInicio()+"", person.getFechaFin()+""
         };
+        String title = "Información de estudiante";
+        int action = 3;
 
         try {
             CSV.writeInCSV("CSV\\Estudiante.csv", data);
@@ -62,8 +64,7 @@ public class ControllerEstudiante {
         }
 
         try {
-            String title = "Información de estudiante";
-            PDF.writePDF("PDF\\Estudiante.pdf", title, data);
+            PDF.writePDF("PDF\\Estudiante.pdf", title, data, action);
             System.out.println("Información generada con exito!");
         } catch (DocumentException e) {
             throw new RuntimeException(e);
