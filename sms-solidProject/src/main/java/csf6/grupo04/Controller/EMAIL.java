@@ -7,11 +7,10 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class EMAIL {
-    public static void sendEmail(String email, String filePath){
-        final String username = "galanreyna00@gmail.com";
-        final String password = "CSFcourse2022";
-        String from = "galanreyna00@gmail.com";
+    private static final String username = "galanreyna00@gmail.com";
+    private static final String password = "CSFcourse2022";
 
+    public static void sendEmail(String email, String filePath){
         Properties props = new Properties();
         props.put("mail.smtp.auth", true);
         props.put("mail.smtp.host", "smtp.gmail.com");
@@ -49,13 +48,7 @@ public class EMAIL {
             message.setContent(content);
             Transport.send(message);
         }
-        catch(MessagingException e)
-        {
-            e.printStackTrace();
-            System.out.println("No se pudo enviar el mensaje");
-        }
-
-        catch(IOException e)
+        catch(MessagingException | IOException e)
         {
             e.printStackTrace();
             System.out.println("No se pudo enviar el mensaje");

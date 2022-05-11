@@ -30,6 +30,7 @@ public class PDF {
         doc.add(pdftitle);
 
         StringJoiner text = new StringJoiner(" ");
+        String plaintext = null;
         switch (action)
         {
             case 1 ->
@@ -40,7 +41,7 @@ public class PDF {
                             text.add("Teléfono: " + data[5] + "\n");
                             text.add("Dirección: " + data[6] + "\n");
                             text.add("Cargo: " + data[7] + "\n");
-                        String plaintext = text.toString();
+                            plaintext = text.toString();
 
                         Paragraph pdfbody = new Paragraph(plaintext,
                                 FontFactory.getFont("arial",
@@ -57,7 +58,7 @@ public class PDF {
                             text.add("Edad: " + data[3] + "\n");
                             text.add("Teléfono: " + data[5] + "\n");
                             text.add("Dirección: " + data[6] + "\n");
-                        String plaintext = text.toString();
+                            plaintext = text.toString();
 
                         Paragraph pdfbody = new Paragraph(plaintext,
                                 FontFactory.getFont("arial",
@@ -76,17 +77,17 @@ public class PDF {
                             text.add("Teléfono: " + data[5] + "\n");
                             text.add("Curso: " + data[6] + "\n");
                             text.add("Estdiante desde: " + data[7] + " hasta: " + data[8] + "\n");
-                        String plaintext = text.toString();
-
-                        Paragraph pdfbody = new Paragraph(plaintext,
-                                FontFactory.getFont("arial",
-                                        20,
-                                        BaseColor.BLACK
-                                )
-                        );
-                        doc.add(pdfbody);
+                            plaintext = text.toString();
                     }
         }
+
+        Paragraph pdfbody = new Paragraph(plaintext,
+                FontFactory.getFont("arial",
+                        20,
+                        BaseColor.BLACK
+                )
+        );
+        doc.add(pdfbody);
 
         doc.close();
     }
